@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insightlancer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="main-container">
+    
+    <!-- Header -->
+    <div class="header">
+      <h1>Insightlancer</h1>
+      <p>Welcome Back</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button onclick="showTab(0)" id="tab-login" class="tab active">Login</button>
+      <button onclick="showTab(1)" id="tab-register" class="tab">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="form-container">
+      <p class="form-title">Please Sign in to continue.</p>
+      
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+      </div>
+      
+      <div class="input-group">
+        <label>Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="••••••••">
+          <button class="eye-btn">👁</button>
+        </div>
+      </div>
+
+      <label class="checkbox-label">
+        <input type="checkbox" checked>
+        <span>Remember me next time</span>
+      </label>
+
+      <button onclick="handleLogin()" class="submit-btn">Sign In</button>
+
+      <p class="switch-text">
+        Don't have account? 
+        <span onclick="showTab(1)">Sign Up</span>
+      </p>
+    </div>
+
+    <!-- Register Form -->
+    <div id="register-form" class="form-container hidden">
+      <p class="form-title">Please register to login.</p>
+      
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" placeholder="Enter username">
+      </div>
+      
+      <div class="input-group">
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="01XXXXXXXXX">
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Create password">
+      </div>
+
+      <button onclick="handleRegister()" class="submit-btn">Sign Up</button>
+
+      <p class="switch-text">
+        Already have account? 
+        <span onclick="showTab(0)">Sign In</span>
+      </p>
+    </div>
+
+    <!-- Success Screen -->
+    <div id="success-screen" class="form-container hidden text-center">
+      <div class="success-icon">🎉</div>
+      <h2>Login Successful!</h2>
+      <p>একটি সাকসেস SMS পাঠানো হয়েছে আপনার মোবাইলে।</p>
+      <button onclick="resetToLogin()" class="submit-btn bg-blue-600">Go to Dashboard</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
