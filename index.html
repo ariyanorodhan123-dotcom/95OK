@@ -1,94 +1,120 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insightlancer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PJOK VIP Login</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  
-  <div class="main-container">
-    
-    <!-- Header -->
-    <div class="header">
-      <h1>Insightlancer</h1>
-      <p>Welcome Back</p>
-    </div>
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <button onclick="showTab(0)" id="tab-login" class="tab active">Login</button>
-      <button onclick="showTab(1)" id="tab-register" class="tab">Register</button>
-    </div>
+<div class="container">
 
-    <!-- Login Form -->
-    <div id="login-form" class="form-container">
-      <p class="form-title">Please Sign in to continue.</p>
-      
-      <div class="input-group">
-        <label>Username</label>
-        <input type="text" id="username" placeholder="Enter username">
-      </div>
-      
-      <div class="input-group">
-        <label>Password</label>
-        <div class="password-wrapper">
-          <input type="password" id="password" placeholder="••••••••">
-          <button class="eye-btn">👁</button>
-        </div>
-      </div>
+<div class="login-box">
 
-      <label class="checkbox-label">
-        <input type="checkbox" checked>
-        <span>Remember me next time</span>
-      </label>
+<div class="logo">
 
-      <button onclick="handleLogin()" class="submit-btn">Sign In</button>
+<img src="https://images.23924894.com/wsd-images-prod/pkokbdtf6/fe_setting/web_logo/wps_PKOK_logo_20250501154628.png">
 
-      <p class="switch-text">
-        Don't have account? 
-        <span onclick="showTab(1)">Sign Up</span>
-      </p>
-    </div>
+<h2>VIP LOGIN</h2>
 
-    <!-- Register Form -->
-    <div id="register-form" class="form-container hidden">
-      <p class="form-title">Please register to login.</p>
-      
-      <div class="input-group">
-        <label>Username</label>
-        <input type="text" placeholder="Enter username">
-      </div>
-      
-      <div class="input-group">
-        <label>Mobile Number</label>
-        <input type="tel" placeholder="01XXXXXXXXX">
-      </div>
+</div>
 
-      <div class="input-group">
-        <label>Password</label>
-        <input type="password" placeholder="Create password">
-      </div>
+<form>
 
-      <button onclick="handleRegister()" class="submit-btn">Sign Up</button>
+<div class="input-box">
 
-      <p class="switch-text">
-        Already have account? 
-        <span onclick="showTab(0)">Sign In</span>
-      </p>
-    </div>
+<i class="fa-solid fa-phone"></i>
 
-    <!-- Success Screen -->
-    <div id="success-screen" class="form-container hidden text-center">
-      <div class="success-icon">🎉</div>
-      <h2>Login Successful!</h2>
-      <p>একটি সাকসেস SMS পাঠানো হয়েছে আপনার মোবাইলে।</p>
-      <button onclick="resetToLogin()" class="submit-btn bg-blue-600">Go to Dashboard</button>
-    </div>
-  </div>
+<input type="text" placeholder="Mobile Number">
 
-  <script src="script.js"></script>
+</div>
+
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input type="password" placeholder="Password">
+
+<span class="eye">
+
+<i class="fa-solid fa-eye"></i>
+
+</span>
+
+</div>
+
+
+<div class="remember">
+
+<label>
+
+<input type="checkbox">
+
+Remember Me
+
+</label>
+
+<a href="#">Forgot Password?</a>
+
+</div>
+
+<button class="login-btn">
+
+LOGIN
+
+</button>
+
+<div class="divider">
+
+<span>OR</span>
+
+</div>
+
+<button class="google-btn">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg">
+
+Continue with Google
+
+</button>
+
+<p class="register">
+
+Don't have an account?
+
+<a href="#">
+
+Register Now
+
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+</div>
+
 </body>
+
 </html>
